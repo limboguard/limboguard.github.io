@@ -66,7 +66,7 @@
     /* Card Slider - Swiper */
 	var cardSlider = new Swiper('.card-slider', {
 		autoplay: {
-            delay: 5000,
+            delay: 6000,
             disableOnInteraction: false
 		},
         loop: true,
@@ -80,7 +80,7 @@
             // when window is <= 992px
             992: {
                 slidesPerView: 2
-            },
+            },  
             // when window is <= 768px
             768: {
                 slidesPerView: 1
