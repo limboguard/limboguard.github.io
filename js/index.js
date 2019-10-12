@@ -1,31 +1,38 @@
-firebase.auth().onAuthStateChanged(function(user) {
-  if (user) {
-    
-	document.getElementById("user-div").style.display = "block";
-	document.getElementById("login-div").style.display = "none";
-	
-  } else {
-	document.getElementById("user-div").style.display = "none";
-	document.getElementById("login-div").style.display = "block";
-  }
-});
+var mainApp = {};
+var userName = {};
+(function(){
+    var firebase = app_fireBase;
+var uid= null;
+    firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+      // User is signed in.
+      uid =user.uid;
+      var un = user.getUserName;
+      document.getElementById("user_name").innerHTML = un;
 
-function login(){
-	
-	var userEmail = document.getElementById("loginmail").value;
-	var userPass = document.getElementById("loginpasswd").value;
-	
-	window.alert(userEmail + " " + userPass);
-	
-firebase.auth().createUserWithEmailAndPassword(userEmail, userPass).catch(function(error) {
-  // Handle Errors here.
-  var errorCode = error.code;
-  var errorMessage = error.message;
-	window.alert(userEmail + " " + userPass);
-	window.alert("Error: " + errorMessage);
+      var user = firebase.auth().currentUser;
+
+      if(user != null){
+
+        var un = user.getUserName;
+        document.getElementById("user_name").innerHTML = un;
   
+      }
+    }
+    else{
+      // redirect to login page
+        uid = null;
+        userName = user.userName;
+        window.location.replace("login2.html")  
+    }
 
-  // ...
-	});
-	
-}
+  });
+
+  function logOut() 
+    {
+    firebase.auth.logOut();
+    }
+
+    mainApp.logOut = logOut;
+
+})()
