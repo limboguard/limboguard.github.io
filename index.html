@@ -18,6 +18,13 @@
 
     <!-- Website Title -->
     <title>Grow</title>
+
+    <!-- Firebase Scripts-->
+    <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-firestore.js"></script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+    <script src="js/fireBase.js"></script> <!-- FireBase Script-->
     
     <!-- Styles -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700" rel="stylesheet">
@@ -31,6 +38,8 @@
 	<!-- Grow Icon  -->
     <link rel="icon" href="images/grow-icon.png">
 </head>
+
+
 <body data-spy="scroll" data-target=".fixed-top">
     
     <!-- Preloader -->
@@ -68,8 +77,17 @@
                 <li class="nav-item">
                     <a class="nav-link page-scroll" href="#contact">CONTACT</a>
                 </li>
-				<li class="nav-item">
-                    <a class="nav-link page-scroll" href="login.html">SIGN IN</a>
+
+                <li class="nav-item" >
+                    <a class="nav-link page-scroll" id = "userName" ></a>
+                </li>
+
+                <li class="nav-item" >
+                    <a class="nav-link page-scroll" id = "logOut" ></a>
+                </li>
+
+                <li class="nav-item" >
+                    <a class="nav-link page-scroll" id = "signIn" href="login.html">SIGN IN</a>
                 </li>
 
                 <!----<li class="nav-item">
@@ -329,6 +347,8 @@
 
     <!-- Scripts -->
     <script src="js/index.js"></script> <!-- Main Script-->
+
+
     <script src="js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
     <script src="js/popper.min.js"></script> <!-- Popper tooltip library for Bootstrap -->
     <script src="js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
