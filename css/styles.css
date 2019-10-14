@@ -1049,14 +1049,14 @@ input[type='checkbox'] {
 
 .tabs #tab-3 img {
 	margin: 0 auto 3rem auto;
-}
+} 
 
 
 /*********************/
 /*     06. Video     */
 /*********************/
 .basic-1 {
-	padding-top: 6.375rem;
+	padding-top: 4.375rem;
 	padding-bottom: 6.875rem;
 	background: url('../images/video-background.jpg') center center no-repeat;
 	background-size: cover; 
