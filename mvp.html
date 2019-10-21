@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <style>
-        #editor {
-            margin: 0;
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
+    <style type="text/css" media="screen">
+        .ace_editor {
+            position: relative !important;
+            border: 1px solid lightgray;
+            margin: auto;
+            height: 200px;
+            width: 80%;
         }
+    </style>
+    <style>
         div.background {
             background: url(klematis.jpg) repeat;
             border: 2px solid #6600ff;
@@ -148,19 +149,20 @@
     </nav>
     
     <pre id="editor">function foo(items) {
-            var i;
-            for (i = 0; i &lt; items.length; i++) {
-                alert("Ace Rocks " + items[i]);
-            }
-        }</pre>
-        
-        <script src="src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
-        <script>
-            var editor = ace.edit("editor");
-            editor.setTheme("ace/theme/twilight");
-            editor.session.setMode("ace/mode/javascript");
-        </script>
+        var i;
+        for (i = 0; i &lt; items.length; i++) {
+            alert("Ace Rocks " + items[i]);
+        }
     
+    }</pre>
+    
+    <script src="src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+        var editor = ace.edit("editor");
+        editor.setTheme("ace/theme/twilight");
+        editor.session.setMode("ace/mode/javascript");
+    </script>
+
     <div id="example" class="basic-1">
         <div class="container">
             <div class="row">
