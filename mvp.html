@@ -1,6 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <style>
+        #editor {
+            margin: 0;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+        div.background {
+            background: url(klematis.jpg) repeat;
+            border: 2px solid #6600ff;
+        }
+        
+        div.transbox {
+            margin: 30px;
+            background-color: #6600ff;
+            border: 1px solid #6600ff;
+            opacity: 0.6;
+            filter: alpha(opacity=10); /* For IE8 and earlier */
+        }
+        
+        div.transbox p {
+            margin: 5%;
+            font-weight: bold;
+            color:#6600ff;
+        }
+    </style>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -71,19 +99,19 @@
             </ul>
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link page-scroll" href="#header">HOME <span class="sr-only">(current)</span></a>
+                    <a class="nav-link page-scroll" href="index.html#header">HOME <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link page-scroll" href='mvp.html'>MVP</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link page-scroll" href="#team">OUR TEAM</a>
+                    <a class="nav-link page-scroll" href="index.html#team">OUR TEAM</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link page-scroll" href="#example">OUR PRODUCT</a>
+                    <a class="nav-link page-scroll" href="index.html#example">OUR PRODUCT</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link page-scroll" href="#contact">CONTACT</a>
+                    <a class="nav-link page-scroll" href="index.html#contact">CONTACT</a>
                 </li>
 
                 <li class="nav-item" >
@@ -117,127 +145,73 @@
                 </span>
             </span>
         </div>
-    </nav> <!-- end of navbar -->
-    <!-- end of navigation -->
-
-    <div id="example" class="basic-1">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <h2>   </h2>
-                    </div> <!-- end of col -->
-                    <div class="col-lg-12">
-                        <h2>MVP</h2>
-                    </div> <!-- end of col -->
-                </div> <!-- end of row -->
-                <div class="row">
-                    <div class="col-lg-12">
-                        <h1></h1>
-                        <h5>
-                            
-                                        
-                        </h5>
-                        <h1></h1>
-            
-                    </div> <!-- end of col -->
-                </div> <!-- end of row -->
+    </nav>
     
-                
-                <div class="row">
-                    <div class="col-lg-12">
-                        <!-- Video example -->
-                        <div class="image-container">
+    <pre id="editor">function foo(items) {
+            var i;
+            for (i = 0; i &lt; items.length; i++) {
+                alert("Ace Rocks " + items[i]);
+            }
+        }</pre>
+        
+        <script src="src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+        <script>
+            var editor = ace.edit("editor");
+            editor.setTheme("ace/theme/twilight");
+            editor.session.setMode("ace/mode/javascript");
+        </script>
+    
+    <div id="example" class="basic-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2>   </h2>
+                </div> <!-- end of col -->
+                <div class="col-lg-12">
+                    <h2>MVP</h2>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1></h1>
+                    <h5>
+                        
+                                    
+                    </h5>
+                    <h1></h1>
+        
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+
+            
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- Video example -->
+                    <div class="image-container">
+                        
                             <div class="transbox">
+                                
                             
-                                    <table id="experimentalHeader">
-                                            <tr>
-                                            <td valign="top" id="headerTdLeft"></td>
-                                            <td valign="top" id="headerTdRight">
-                                            
-                                            <div id="surveyHeader">
-                                            
-                                            </div>
-                                            
-                                            </td>
-                                            </tr>
-                                            </table>
-                                            
-                                            
-                                            <div id="pyInputPane">
-                                            
-                                            <div id="codeInputWarnings">Write code in
-                                            
-                                              <select id="pythonVersionSelector">
-                                                <option value="3" selected>Python 3.6</option>
-                                                <option value="2">Python 2.7</option>
-                                                <option value="py3anaconda">Python 3.6 with Anaconda (experimental)</option>
-                                              </select>
-                                            
-                                            </div>
-                                            
-                                            <div id="someoneIsTypingDiv" style="color: #e93f34; font-weight: bold; display: none;">Someone is typing ...</div>
-                                            
-                                            <div id="codeInputPane"></div> <!-- populate with Ace code editor instance -->
-                                            <div id="frontendErrorOutput"></div>
-                                            <div id="surveyPane"></div>
-                                            
-                                            <p>
-                                            <button id="executeBtn" class="bigBtn" type="button">Visualize Execution</button>
-                                            <button style="margin-left: 20px;" id="liveModeBtn" class="bigBtn" type="button">Live Programming Mode</button>
-                                            </p>
-                                            
-                                            <div id="instructionsPane"></div>
-                                            
-                                            <div id="javaOptionsPane" style="margin-top: 20px;">
-                                            <!--[<i>coming soon!</i>] Java options: pass in command-line arguments and feed user input to stdin-->
-                                            </div>
-                                            
-                                            <div id="optionsPane">
-                                              <select id="cumulativeModeSelector">
-                                                <option value="false">hide exited frames [default]</option>
-                                                <option value="true">show all frames (Python)</option>
-                                              </select>
-                                              <select id="heapPrimitivesSelector">
-                                                <option value="false">inline primitives and try to nest objects</option>
-                                                <option value="nevernest" selected>inline primitives but don't nest objects [default]</option>
-                                                <option value="true">render all objects on the heap (Python/Java)</option>
-                                              </select>
-                                              <select id="textualMemoryLabelsSelector">
-                                                <option value="false">draw pointers as arrows [default]</option>
-                                                <option value="true">use text labels for pointers</option>
-                                              </select>
-                                            </div>
-                                            
-                                            
-                                            <div id="testCasesParent"></div>
-                                            
-                                            <div id="exampleSnippets"></div>
-                                            
-                                            </div>
-                                            
-                                            <div id="pyOutputPane"></div>
-                                            
-                                            <div id="footer"></div>
-                                            
-                                            <div id="chat_div"></div>
-                            </div>
-                        </div> <!-- end of image-container -->
-                        <!-- end of video example -->
-                    </div> <!-- end of col -->
-                </div> <!-- end of row -->
-                
-            </div> <!-- end of container -->
-        </div> <!-- end of basic-1 -->
-        <!-- end of video -->
+                        
+                        <div class="video-wrapper">
+                            <iframe width="800" height="500" frameborder="10" src="https://pythontutor.com/iframe-embed.html#code=x%20%3D%205%0Ay%20%3D%2010%0Az%20%3D%20x%20%2B%20y&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=3&heapPrimitives=nevernest&origin=opt-frontend.js&py=2&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+                        </div> <!-- end of video-wrapper -->
 
+                    </div>
+                    </div> <!-- end of image-container -->
+                    <!-- end of video example -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+            
+        </div> <!-- end of container -->
+    </div> <!-- end of basic-1 -->
+    <!-- end of video -->
 
-
-
-    <!-- Footer -->
+    
+     <!-- Footer -->
     <div class="footer">
         <div class="container">
             <div class="row">
-                
                 <div class="col-md-4">
                     <div class="footer-col last">
                         <h4>Social Media</h4>
