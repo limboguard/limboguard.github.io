@@ -241,6 +241,7 @@ for i in arr:
             var code = encodeURIComponent(editor.getValue());
             document.getElementById('visualization').src = "https://pythontutor.com/iframe-embed.html#code="+code+"&cumulative=false&curInstr=3&heapPrimitives=nevernest&origin=opt-frontend.js&py=2&rawInputLstJSON=%5B%5D&textReferences=false";
             console.log(document.getElementById('visualization').src);
+            document.getElementById('visualization').contentWindow.location.reload();
         }
     </script>
 
