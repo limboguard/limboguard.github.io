@@ -18,8 +18,8 @@ NOTE: Grow will use the back-end provided by the experimental feature live (http
 
 Wishlist (in Spanish):
 
-- Cambiar estilos CSS para que combinen con el Landing Page
-- Por ahora http://localhost:8003/live.html corre localmente ejecutando py bottle_server.py (usando Python 3.x.x), si queremos correrlo en la página. Por ahora he visto que no se puede desplegar ya que Github Pages desplega contenido estatico (ref:https://stackoverflow.com/questions/24296873/is-it-possible-to-run-python-in-the-web-with-github-io), sin embargo no he consultado a fondo este aspecto
+- Cambiar estilos CSS para que combinen con el Landing Page. Estuve editando todas las fuentes CSS para cambiar el Live.html pero no he encontrado cúales se relacionan con dicho archivo
+- Por ahora ``` http://localhost:8003/live.html``` corre localmente ejecutando ```py bottle_server.py``` (usando Python 3.x.x), si queremos correrlo en la página. Por ahora he visto que no se puede desplegar ya que Github Pages desplega contenido estatico y se necesita correr ```pip```  (ref:https://stackoverflow.com/questions/24296873/is-it-possible-to-run-python-in-the-web-with-github-io), sin embargo no he consultado a fondo este aspecto
 
 
 However, it can be hard to run your own visualizer locally for
