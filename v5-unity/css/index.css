@@ -1,7 +1,7 @@
 /* CSS accompanying ../index.html */
 
 body {
-  background-color: white;
+  background-color: #3D58A2;
 
   font-family: Georgia, Palatino, Times, serif;
 
@@ -163,7 +163,7 @@ div#detailsPane {
 
 #partnershipDiv {
   /*background-color: #d8e1e3;*/
-  background-color: #d9cdb6;
+  background-color:#6600ff;
   width: 60%;
   padding: 8px;
   margin-left: auto;

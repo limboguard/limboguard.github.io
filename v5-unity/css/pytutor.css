@@ -260,7 +260,7 @@ div.ExecutionVisualizer .stackFrame .retval {
 div.ExecutionVisualizer table.listTbl,
 div.ExecutionVisualizer table.tupleTbl,
 div.ExecutionVisualizer table.setTbl {
-  background-color: #ffffc6;
+  background-color:  #6600ff;
 }
 
 
@@ -301,7 +301,7 @@ div.ExecutionVisualizer table.listTbl td.listElt {
 /* make this slightly more compact than listTbl since arrays can be
    rendered on the stack so we want to kinda conserve space */
 div.ExecutionVisualizer table.cArrayTbl {
-  background-color: #ffffc6;
+  background-color:  #6600ff;
   padding-left: 0px;
   padding-top: 0px;
   padding-bottom: 0px;
@@ -379,7 +379,7 @@ div.ExecutionVisualizer table.tupleTbl td.tupleElt {
 }
 
 div.ExecutionVisualizer table.customObjTbl {
-  background-color: white;
+  background-color:  #6600ff;
   color: black;
   border: 1px solid black;
 }
@@ -418,14 +418,14 @@ div.ExecutionVisualizer table.classTbl {
 div.ExecutionVisualizer table.dictTbl td.dictKey,
 div.ExecutionVisualizer table.instTbl td.instKey,
 div.ExecutionVisualizer table.classTbl td.classKey {
-  background-color: #faebbf;
+  background-color:  #6600ff;
 }
 
 div.ExecutionVisualizer table.dictTbl td.dictVal,
 div.ExecutionVisualizer table.instTbl td.instVal,
 div.ExecutionVisualizer table.classTbl td.classVal,
 div.ExecutionVisualizer td.funcCod {
-  background-color: #ffffc6;
+  background-color:  #6600ff;
 }
 
 
@@ -502,7 +502,7 @@ div.ExecutionVisualizer div#globals_area {
 
 div.ExecutionVisualizer div.stackFrame,
 div.ExecutionVisualizer div.zombieStackFrame {
-  background-color: #ffffff;
+  background-color:  #6600ff;
   margin-bottom: 15px;
   padding: 2px;
   padding-left: 6px;
@@ -518,7 +518,7 @@ div.ExecutionVisualizer div.zombieStackFrame {
 }
 
 div.ExecutionVisualizer div.highlightedStackFrame {
-  background-color: #e2ebf6;
+  background-color:  #6600ff;
   /*background-color: #d7e7fb;*/
 
   /*background-color: #c0daf8;*/
@@ -703,7 +703,7 @@ div.ExecutionVisualizer div#vizHeader {
 
 /* prev then curr, so curr gets precedence when both apply */
 div.ExecutionVisualizer .highlight-prev {
-  background-color: #F0F0EA;
+  background-color:  #6600ff;
 }
 
 div.ExecutionVisualizer .highlight-cur {
@@ -716,13 +716,13 @@ div.ExecutionVisualizer .highlight-legend {
 
 /* resizing sliders from David Pritchard */
 .ui-resizable-e {
-  background-color: #dddddd;
+  background-color:  #6600ff;
   width: 1px;
-  border: 3px solid white;
+  border: 3px solid #6600ff;
 }
 
 .ui-resizable-e:hover {
-  border-color: #dddddd;
+  border-color: #6600ff;
 }
 
 div.ExecutionVisualizer a,
@@ -743,7 +743,7 @@ div.ExecutionVisualizer div#rawUserInputDiv {
 
 /* prev then curr, so curr gets precedence when both apply */
 div.ExecutionVisualizer .pycrazy-highlight-prev {
-  background-color: #eeeeee; /*#F0F0EA;*/
+  background-color: #6600ff; /*#F0F0EA;*/
   /*
   text-decoration: none;
   border-bottom: 1px solid #dddddd;
@@ -784,7 +784,7 @@ div.ExecutionVisualizer .pycrazy-highlight-prev-and-cur {
 /* stack and queue css by Will Gwozdz */
 div.ExecutionVisualizer table.queueTbl,
 div.ExecutionVisualizer table.stackTbl {
-  background-color: #ffffc6;
+  background-color: #6600ff;
 }
 
 div.ExecutionVisualizer table.queueTbl,
@@ -806,18 +806,18 @@ div.ExecutionVisualizer table.queueTbl td.queueElt {
 
 div.ExecutionVisualizer table.stackTbl td.stackFElt,
 div.ExecutionVisualizer table.queueTbl td.queueFElt {
-  background-color: white;
+  background-color: #6600ff;
   border-top: 1px solid #555555;
   border-bottom: 1px solid #555555;
 }
 
 div.ExecutionVisualizer table.stackTbl td.stackLElt {
-  background-color: white;
+  background-color: #6600ff;
   border-left: 1px solid #555555;
 }
 
 div.ExecutionVisualizer table.queueTbl td.queueLElt {
-  background-color: white;
+  background-color: #6600ff;
   border-top: 1px solid#555555;
   border-bottom: 1px solid #555555;
   border-left: 1px dashed #555555;

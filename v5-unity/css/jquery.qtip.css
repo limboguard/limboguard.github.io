@@ -120,13 +120,13 @@
 
 /*! Light tooltip style */
 .qtip-light{
-	background-color: white;
+	background-color: #3D58A2;
 	border-color: #E2E2E2;
 	color: #454545;
 }
 
 	.qtip-light .qtip-titlebar{
-		background-color: #f1f1f1;
+		background-color: #3D58A2;
 	}
 
 

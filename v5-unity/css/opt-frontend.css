@@ -22,7 +22,7 @@ h2 {
 
 
 body {
-  background-color: white;
+  background-color:  #6600ff;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 10pt;
 }
@@ -64,7 +64,7 @@ table#pyOutputPane {
 #codeInputPane {
   margin-top: 5px;
   font-size: 12pt;
-  border: 1px solid #ddd;
+  border: 1px solid #6600ff;
 }
 
 #codeInputWarnings {
@@ -96,7 +96,7 @@ button.surveyBtnBig {
 #footer {
   color: #999;
   font-size: 9pt;
-  border-top: 1px solid #bbbbbb;
+  border-top: 1px solid #6600ff;
   padding-top: 5px;
   margin-top: 5px;
 
@@ -280,7 +280,7 @@ button.surveyBtnBig {
 }
 
 #exampleSnippets {
- border-top: 1px solid #ccc;
+ border-top: 1px solid #6600ff;
  margin-top: 15px;
 }
 
@@ -302,7 +302,7 @@ textarea.bubbleInputText {
 
 .qtip-content {
 	color: #333;
-	background-color: #ffffff;
+	background-color:  #6600ff;
 
 	max-width: 390px;
 	width: 390px;
