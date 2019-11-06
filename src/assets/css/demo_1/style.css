@@ -40,25 +40,6 @@ h5 {
 	padding-bottom: 0;
 }
 
-.learn-Grow-button {
-	display: inline-block;
-	width: 150px;
-	margin-left: 80px;
-	margin-right: 80px;
-	height: 3.125rem;
-	border: 1px solid #be8003;
-	border-radius: 1.5rem;
-	background-color: #be8003;
-	color: #fff;
-	font: 700 0.75rem/1.75rem "Montserrat", sans-serif;
-	cursor: pointer;
-	transition: all 0.2s ease;
-}
-
-.learn-Grow-button:hover {
-	background-color: transparent;
-	color: #be8003;
-}
 
 h6 {
 	color: #2c1a7e;
@@ -71,6 +52,7 @@ h7 {
 	text-align: center;
 	font: 100 0.9rem/0.9rem "Montserrat", sans-serif;
 }
+
 @-webkit-keyframes dropdownAnimation {
   from {
     opacity: 0;
