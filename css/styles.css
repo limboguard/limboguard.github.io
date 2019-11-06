@@ -1040,6 +1040,10 @@ input[type='checkbox'] {
 	width: 100%; /* for proper display in IE11 */
 }
 
+.top-div{
+	margin-top: 50px;
+}
+
 .tabs .card {
 	border: none;
 	background: transparent;
