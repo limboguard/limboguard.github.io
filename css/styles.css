@@ -96,14 +96,13 @@ h4 {
 }
 
 h5 {
-	color:#262431;
+	color:#f1f1f8;
 	font: 700 2rem/2rem "Montserrat", sans-serif;
 	  text-align: center;
-
 }
 
 h6 {
-	color: #2c1a7e;
+	color: #f1f1f8;
 	text-align: center;
 	font: 400 1.3rem/1.3rem "Montserrat", sans-serif;
 }
@@ -1161,7 +1160,7 @@ checkmaterial{
 	font: 200 1.35rem/1.35rem "Montserrat", sans-serif;
 	margin-left: auto;
 	margin-right: auto;
-
+	padding-bottom: 3;
   	display: block;
 }
 
