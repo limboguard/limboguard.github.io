@@ -113,6 +113,58 @@ h7 {
 	text-align: center;
 	font: 100 0.9rem/0.9rem "Montserrat", sans-serif;
 }
+hr.blanco {
+	width:"50%";
+	border-top: 2px solid white;
+}
+
+pointsTitle {
+	color:white;
+	text-align: center;
+	font: 400 1.6rem/1.6rem "Montserrat", sans-serif;
+	display: inline-block;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	transition: all 0.2s ease;
+}
+
+visual {
+	color: #c8aaf9;
+	text-align: center;
+	font: 300 1.2rem/1.2rem "Montserrat", sans-serif;
+	display: inline-block;
+	width: 150px;
+	margin-left: 80px;
+	margin-right: 80px;
+	height: 2.725rem;
+	cursor: pointer;
+	transition: all 0.2s ease;
+}
+auditive {
+	color: #73c8e2;
+	text-align: center;
+	font: 300 1.2rem/1.2rem "Montserrat", sans-serif;
+	display: inline-block;
+	width: 150px;
+	margin-left: 80px;
+	margin-right: 80px;
+	height: 2.725rem;
+	cursor: pointer;
+	transition: all 0.2s ease;
+}
+traditional {
+	color: #6b93ec;
+	text-align: center;
+	font: 300 1.2rem/1.2rem "Montserrat", sans-serif;
+	display: inline-block;
+	width: 150px;
+	margin-left: 80px;
+	margin-right: 80px;
+	height: 2.725rem;
+	cursor: pointer;
+	transition: all 0.2s ease;
+}
 .wrapper{
 	display: flex;
 	justify-content: space-between;	
@@ -1090,6 +1142,81 @@ input[type='checkbox'] {
 	background: url('../images/video-background.jpg') center center no-repeat;
 	background-size: cover; 
 }
+
+
+.circular--square {
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 15%;
+}
+
+.pointsVisual {
+	display: inline-block;
+	width: 150px;
+	margin-left: 80px;
+	margin-right: 80px;
+	height: 3.125rem;
+	border: 1px solid #c8aaf9;
+	border-radius: 1.5rem;
+	background-color: #c8aaf9;
+	color: #2c1a7e;
+	font: 700 0.75rem/1.75rem "Montserrat", sans-serif;
+	cursor: pointer;
+	transition: all 0.2s ease;
+}
+
+.pointsVisual:hover {
+	background-color: transparent;
+	color:#c8aaf9;
+}
+.pointsAuditive {
+	display: inline-block;
+	width: 150px;
+	margin-left: 80px;
+	margin-right: 80px;
+	height: 3.125rem;
+	border: 1px solid #73c8e2;
+	border-radius: 1.5rem;
+	background-color: #73c8e2;
+	color: #2c1a7e;
+	font: 700 0.75rem/1.75rem "Montserrat", sans-serif;
+	cursor: pointer;
+	transition: all 0.2s ease;
+	
+}
+.pointsAuditive:hover {
+	background-color: transparent;
+	color:#73c8e2;
+}
+
+
+.pointsTraditional:hover {
+	background-color: transparent;
+	color:#6b93ec;
+}
+.pointsTraditional {
+	display: inline-block;
+	width: 150px;
+	margin-left: 80px;
+	margin-right: 80px;
+	height: 3.125rem;
+	border: 1px solid #6b93ec;
+	border-radius: 1.5rem;
+	background-color: #6b93ec;
+	color: #2c1a7e;
+	font: 700 0.75rem/1.75rem "Montserrat", sans-serif;
+	cursor: pointer;
+	transition: all 0.2s ease;
+}
+  
+.textNom {
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	padding-top: 25px;
+  }
 
 .basic-1 h2 {
 	margin-bottom: 1.125rem;
