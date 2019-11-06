@@ -535,7 +535,7 @@
               backgroundColor: 'rgba(150, 77, 247,0.5)',
               borderColor: 'rgba(150, 77, 247,0.5)',
               borderWidth: 0
-            }, {
+            },{
               label: 'TRADITIONAL',
               data: Marketing_data_1_2,
               backgroundColor: 'rgba(100, 90, 250,0.5)',

@@ -27,6 +27,19 @@ h5 {
 
 }
 
+.slider-1 .profile-image {
+	width: 6rem;
+	height: 6rem;
+	margin-right: auto;
+	margin-bottom: 0.25rem;
+	margin-left: auto;
+	border-radius: 50%;
+}
+
+.slider-1 .profile-body {
+	padding-bottom: 0;
+}
+
 .learn-Grow-button {
 	display: inline-block;
 	width: 150px;
