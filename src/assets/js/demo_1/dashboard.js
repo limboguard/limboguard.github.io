@@ -157,9 +157,22 @@
     if ($("#net-profit").length) {
       var marksCanvas = document.getElementById("net-profit");
       var marksData = {
-        labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"],
+        labels: ["Efficency","Elegance","Analytical", "Complexity", "Cleanliness","Creativity"],
         datasets: [{
-          label: "Sales",
+          label: "Traditional",
+          backgroundColor: 'rgba(100, 90, 250,0.5)',
+          borderColor: 'rgba(100, 90, 250,0.5)',
+          borderWidth: 0,
+          fill: true,
+          radius: 0,
+          pointRadius: 0,
+          pointBorderWidth: 0,
+          pointBackgroundColor: 'rgba(150, 77, 247,0.5)',
+          pointHoverRadius: 10,
+          pointHitRadius: 5,
+          data: [45, 35, 75, 60, 70, 40 ]
+        },{
+          label: "Auditive",
           backgroundColor: 'rgba(88, 208, 222,0.8)',
           borderColor: 'rgba(88, 208, 222,0.8)',
           borderWidth: 0,
@@ -170,20 +183,20 @@
           pointBackgroundColor: 'rgba(88, 208, 222,0.8)',
           pointHoverRadius: 10,
           pointHitRadius: 5,
-          data: [54, 45, 60, 70, 54, 75, 60, 54]
+          data: [54, 45, 60, 70, 54, 75]
         }, {
-          label: "Orders",
-          backgroundColor: 'rgba(150, 77, 247,1)',
-          borderColor: 'rgba(150, 77, 247,1)',
+          label: "Visual",
+          backgroundColor: 'rgba(150, 77, 247,0.5)',
+          borderColor: 'rgba(150, 77, 247,0.5)',
           borderWidth: 0,
           fill: true,
           radius: 0,
           pointRadius: 0,
           pointBorderWidth: 0,
-          pointBackgroundColor: 'rgba(150, 77, 247,1)',
+          pointBackgroundColor: 'rgba(150, 77, 247,0.5)',
           pointHoverRadius: 10,
           pointHitRadius: 5,
-          data: [65, 75, 70, 80, 60, 80, 36, 60]
+          data: [65, 75, 70, 80, 60, 80 ]
         }]
       };
 
@@ -506,50 +519,34 @@
     }
     if ($("#market-overview-chart").length) {
       var MarketingChartCanvas = $("#market-overview-chart").get(0).getContext("2d");
-      var Marketing_data_1_1 = [145, 238, 148, 293, 242, 235, 256, 334];
-      var Marketing_data_1_2 = [330, 380, 230, 400, 309, 430, 340, 310];
-      var Marketing_data_1_3 = [375, 440, 284, 450, 386, 480, 400, 365];
-      var Marketing_data_1_4 = [425, 480, 324, 490, 426, 520, 440, 405];
+      var Marketing_data_1_1 = [0,0,0,0,0,0,0, 242, 235, 256,20,0];
+      var Marketing_data_1_2 = [0,0,0,0,0,0,0, 309, 430, 340,50,0];
+      var Marketing_data_1_3 = [0,0,0,0,0,0,0, 386, 480, 400,42,0];
 
-      var Marketing_data_2_1 = [125, 138, 108, 193, 102, 200, 290, 204];
-      var Marketing_data_2_2 = [330, 380, 230, 400, 309, 430, 340, 310];
-      var Marketing_data_2_3 = [375, 440, 284, 450, 386, 480, 400, 365];
-      var Marketing_data_2_4 = [425, 480, 324, 490, 426, 520, 440, 405];
 
-      var Marketing_data_1_1 = [145, 238, 148, 293, 242, 235, 256, 334];
-      var Marketing_data_1_2 = [330, 380, 230, 400, 309, 430, 340, 310];
-      var Marketing_data_1_3 = [375, 440, 284, 450, 386, 480, 400, 365];
-      var Marketing_data_1_4 = [425, 480, 324, 490, 426, 520, 440, 405];
 
       var MarketingChart = new Chart(MarketingChartCanvas, {
         type: 'bar',
         data: {
-          labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"],
+          labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug","Sep","Oct","Nov"],
           datasets: [{
-              label: 'OVERDUE',
+              label: 'VISUAL',
               data: Marketing_data_1_1,
-              backgroundColor: '#826af9',
-              borderColor: '#826af9',
+              backgroundColor: 'rgba(150, 77, 247,0.5)',
+              borderColor: 'rgba(150, 77, 247,0.5)',
               borderWidth: 0
             }, {
-              label: 'SNOOZED',
+              label: 'TRADITIONAL',
               data: Marketing_data_1_2,
-              backgroundColor: '#9e86ff',
-              borderColor: '#9e86ff',
+              backgroundColor: 'rgba(100, 90, 250,0.5)',
+              borderColor: 'rgba(100, 90, 250,0.5)',
               borderWidth: 0
             },
             {
-              label: 'COMPLETED',
+              label: 'AUDITIVE',
               data: Marketing_data_1_3,
-              backgroundColor: '#d0aeff',
-              borderColor: '#d0aeff',
-              borderWidth: 0
-            },
-            {
-              label: 'OVERDUE',
-              data: Marketing_data_1_4,
-              backgroundColor: '#f7d2ff',
-              borderColor: '#f7d2ff',
+              backgroundColor: 'rgba(88, 208, 222,0.8)',
+              borderColor: 'rgba(88, 208, 222,0.8)',
               borderWidth: 0
             }
           ]
@@ -977,7 +974,28 @@
         },
         options: lineStatsOptions
       });
+    }if ($('#dashboard-guage-chart1').length) {
+      var g3 = new JustGage({
+        id: 'dashboard-guage-chart1',
+        value: 15,
+        min: 0,
+        max: 100,
+        symbol: '%',
+        pointer: true,
+        gaugeWidthScale: 1,
+        customSectors: [{
+          color: 'rgba(150, 77, 247,0.5)',
+          lo: 50,
+          hi: 100
+        }, {
+          color: 'rgba(189, 127, 29,0.5)',
+          lo: 0,
+          hi: 50
+        }],
+        counter: true
+      });
     }
+
     if ($('#dashboard-guage-chart').length) {
       var g3 = new JustGage({
         id: 'dashboard-guage-chart',
@@ -988,11 +1006,11 @@
         pointer: true,
         gaugeWidthScale: 1,
         customSectors: [{
-          color: '#ff0000',
+          color: 'rgba(150, 77, 247,0.5)',
           lo: 50,
           hi: 100
         }, {
-          color: '#00ff00',
+          color: 'rgba(189, 127, 29,0.5)',
           lo: 0,
           hi: 50
         }],

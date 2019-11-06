@@ -96,15 +96,23 @@ h4 {
 }
 
 h5 {
-	color: #f1f1f8;
-	font: 700 1.125rem/1.625rem "Montserrat", sans-serif;
+	color:#262431;
+	font: 700 2rem/2rem "Montserrat", sans-serif;
+	  text-align: center;
+
 }
 
 h6 {
-	color: #f1f1f8;
-	font: 700 1rem/1.5rem "Montserrat", sans-serif;
+	color: #2c1a7e;
+	text-align: center;
+	font: 400 1.3rem/1.3rem "Montserrat", sans-serif;
 }
 
+h7 {
+	color: #be8003;
+	text-align: center;
+	font: 100 0.9rem/0.9rem "Montserrat", sans-serif;
+}
 .wrapper{
 	display: flex;
 	justify-content: space-between;	
@@ -419,7 +427,25 @@ input[type='checkbox'] {
 	background-color: transparent;
 	color: #be8003;
 }
+.learn-Grow-button {
+	display: inline-block;
+	width: 150px;
+	margin-left: 80px;
+	margin-right: 80px;
+	height: 3.125rem;
+	border: 1px solid #be8003;
+	border-radius: 1.5rem;
+	background-color: #be8003;
+	color: #fff;
+	font: 700 0.75rem/1.75rem "Montserrat", sans-serif;
+	cursor: pointer;
+	transition: all 0.2s ease;
+}
 
+.learn-Grow-button:hover {
+	background-color: transparent;
+	color: #be8003;
+}
 .change-Grow-button {
 	display: inline-block;
 	width: 200px;
@@ -900,6 +926,9 @@ input[type='checkbox'] {
 	padding-bottom: 0;
 }
 
+.slider-1 .card-body1 {
+	padding-bottom: -5;
+}
 .slider-1 .testimonial-author {
 	margin-bottom: 0;
 }
@@ -965,7 +994,7 @@ input[type='checkbox'] {
 }
 
 .tabs .card-body {
-	padding: 1rem 0 1.25rem 0;
+	padding: 1rem 0 1rem 0;
 }
 
 .tabs .card-title {
@@ -1849,7 +1878,7 @@ a:hover.back-to-top {
 
 	/* Features */
 	.tabs .card-body {
-		padding: 1rem 0 1.5rem 0;
+		padding: 1rem 0 1rem 0;
 	}
 	
 	.tabs #tab-1 .card.left-pane {
