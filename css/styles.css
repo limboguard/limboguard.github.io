@@ -1157,7 +1157,7 @@ checkmaterial{
 	font: 200 1.35rem/1.35rem "Montserrat", sans-serif;
 	margin-left: auto;
 	margin-right: auto;
-
+	padding-bottom: 3;
   	display: block;
 }
 
