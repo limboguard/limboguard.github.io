@@ -479,18 +479,18 @@ input[type='checkbox'] {
 	color: #be8003;
 }
 .learn-Grow-button {
-	display: inline-block;
 	width: 150px;
-	margin-left: 80px;
-	margin-right: 80px;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
 	height: 3.125rem;
 	border: 1px solid #be8003;
 	border-radius: 1.5rem;
 	background-color: #be8003;
 	color: #fff;
 	font: 700 0.75rem/1.75rem "Montserrat", sans-serif;
-	cursor: pointer;
-	transition: all 0.2s ease;
+	margin-top: 5.5rem;
+
 }
 
 .learn-Grow-button:hover {
@@ -1149,6 +1149,15 @@ input[type='checkbox'] {
   margin-right: auto;
   display: block;
   width: 15%;
+}
+checkmaterial{
+	color: #be8003;
+	text-align: center;
+	font: 200 1.35rem/1.35rem "Montserrat", sans-serif;
+	margin-left: auto;
+	margin-right: auto;
+	padding-bottom: 3;
+  	display: block;
 }
 
 .pointsVisual {
