@@ -72,7 +72,8 @@ display:none;
 
 #audiowrap,
 #plwrap {
-margin:0 auto;
+    width: 80%;
+    height: 100%;
 }
 
 #tracks {
