@@ -21,7 +21,7 @@ jQuery(function ($) {
         var index = 0,
             playing = false,
             mediaPath = 'https://archive.org/download/mythium/',
-            extension = '',
+            extension = ''
             tracks = [{
                 "track": 1,
                 "name": "All This Is - Joe L.'s Studio",
