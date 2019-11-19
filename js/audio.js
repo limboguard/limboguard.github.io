@@ -1,129 +1,105 @@
-// Mythium Archive: https://archive.org/details/mythium/
+var music = document.getElementById('music'); // id for audio element
+var duration = music.duration; // Duration of audio clip, calculated here for embedding purposes
+var pButton = document.getElementById('pButton'); // play button
+var playhead = document.getElementById('playhead'); // playhead
+var timeline = document.getElementById('timeline'); // timeline
 
-jQuery(function ($) {
-    'use strict'
-    var supportsAudio = !!document.createElement('audio').canPlayType;
-    if (supportsAudio) {
-        // initialize plyr
-        var player = new Plyr('#audio1', {
-            controls: [
-                'restart',
-                'play',
-                'progress',
-                'current-time',
-                'duration',
-                'mute',
-                'volume',
-                'download'
-            ]
-        });
-        // initialize playlist and controls
-        var index = 0,
-            playing = false,
-            mediaPath = 'https://archive.org/download/mythium/',
-            extension = ''
-            tracks = [{
-                "track": 1,
-                "name": "All This Is - Joe L.'s Studio",
-                "duration": "2:46",
-                "file": "JLS_ATI"
-            }, {
-                "track": 2,
-                "name": "The Forsaken - Broadwing Studio (Final Mix)",
-                "duration": "8:30",
-                "file": "BS_TF"
-            }],
-            buildPlaylist = $.each(tracks, function(key, value) {
-                var trackNumber = value.track,
-                    trackName = value.name,
-                    trackDuration = value.duration;
-                if (trackNumber.toString().length === 1) {
-                    trackNumber = '0' + trackNumber;
-                }
-                $('#plList').append('<li> \
-                    <div class="plItem"> \
-                        <span class="plNum">' + trackNumber + '.</span> \
-                        <span class="plTitle">' + trackName + '</span> \
-                        <span class="plLength">' + trackDuration + '</span> \
-                    </div> \
-                </li>');
-            }),
-            trackCount = tracks.length,
-            npAction = $('#npAction'),
-            npTitle = $('#npTitle'),
-            audio = $('#audio1').on('play', function () {
-                playing = true;
-                npAction.text('Now Playing...');
-            }).on('pause', function () {
-                playing = false;
-                npAction.text('Paused...');
-            }).on('ended', function () {
-                npAction.text('Paused...');
-                if ((index + 1) < trackCount) {
-                    index++;
-                    loadTrack(index);
-                    audio.play();
-                } else {
-                    audio.pause();
-                    index = 0;
-                    loadTrack(index);
-                }
-            }).get(0),
-            btnPrev = $('#btnPrev').on('click', function () {
-                if ((index - 1) > -1) {
-                    index--;
-                    loadTrack(index);
-                    if (playing) {
-                        audio.play();
-                    }
-                } else {
-                    audio.pause();
-                    index = 0;
-                    loadTrack(index);
-                }
-            }),
-            btnNext = $('#btnNext').on('click', function () {
-                if ((index + 1) < trackCount) {
-                    index++;
-                    loadTrack(index);
-                    if (playing) {
-                        audio.play();
-                    }
-                } else {
-                    audio.pause();
-                    index = 0;
-                    loadTrack(index);
-                }
-            }),
-            li = $('#plList li').on('click', function () {
-                var id = parseInt($(this).index());
-                if (id !== index) {
-                    playTrack(id);
-                }
-            }),
-            loadTrack = function (id) {
-                $('.plSel').removeClass('plSel');
-                $('#plList li:eq(' + id + ')').addClass('plSel');
-                npTitle.text(tracks[id].name);
-                index = id;
-                audio.src = mediaPath + tracks[id].file + extension;
-                updateDownload(id, audio.src);
-            },
-            updateDownload = function (id, source) {
-                player.on('loadedmetadata', function () {
-                    $('a[data-plyr="download"]').attr('href', source);
-                });
-            },
-            playTrack = function (id) {
-                loadTrack(id);
-                audio.play();
-            };
-        extension = audio.canPlayType('audio/mpeg') ? '.mp3' : audio.canPlayType('audio/ogg') ? '.ogg' : '';
-        loadTrack(index);
-    } else {
-        // no audio support
-        $('.column').addClass('hidden');
-        var noSupport = $('#audio1').text();
-        $('.container').append('<p class="no-support">' + noSupport + '</p>');
+// timeline width adjusted for playhead
+var timelineWidth = timeline.offsetWidth - playhead.offsetWidth;
+
+// play button event listenter
+pButton.addEventListener("click", play);
+
+// timeupdate event listener
+music.addEventListener("timeupdate", timeUpdate, false);
+
+// makes timeline clickable
+timeline.addEventListener("click", function (event) {
+    moveplayhead(event);
+    music.currentTime = duration * clickPercent(event);
+}, false);
+
+// returns click as decimal (.77) of the total timelineWidth
+function clickPercent(event) {
+    return (event.clientX - getPosition(timeline)) / timelineWidth;
+}
+
+// makes playhead draggable
+playhead.addEventListener('mousedown', mouseDown, false);
+window.addEventListener('mouseup', mouseUp, false);
+
+// Boolean value so that audio position is updated only when the playhead is released
+var onplayhead = false;
+
+// mouseDown EventListener
+function mouseDown() {
+    onplayhead = true;
+    window.addEventListener('mousemove', moveplayhead, true);
+    music.removeEventListener('timeupdate', timeUpdate, false);
+}
+
+// mouseUp EventListener
+// getting input from all mouse clicks
+function mouseUp(event) {
+    if (onplayhead == true) {
+        moveplayhead(event);
+        window.removeEventListener('mousemove', moveplayhead, true);
+        // change current time
+        music.currentTime = duration * clickPercent(event);
+        music.addEventListener('timeupdate', timeUpdate, false);
     }
-});
+    onplayhead = false;
+}
+// mousemove EventListener
+// Moves playhead as user drags
+function moveplayhead(event) {
+    var newMargLeft = event.clientX - getPosition(timeline);
+
+    if (newMargLeft >= 0 && newMargLeft <= timelineWidth) {
+        playhead.style.marginLeft = newMargLeft + "px";
+    }
+    if (newMargLeft < 0) {
+        playhead.style.marginLeft = "0px";
+    }
+    if (newMargLeft > timelineWidth) {
+        playhead.style.marginLeft = timelineWidth + "px";
+    }
+}
+
+// timeUpdate
+// Synchronizes playhead position with current point in audio
+function timeUpdate() {
+    var playPercent = timelineWidth * (music.currentTime / duration);
+    playhead.style.marginLeft = playPercent + "px";
+    if (music.currentTime == duration) {
+        pButton.className = "";
+        pButton.className = "fas fa-play";
+    }
+}
+
+//Play and Pause
+function play() {
+    // start music
+    if (music.paused) {
+        music.play();
+        // remove play, add pause
+        pButton.className = "";
+        pButton.className = "fas fa-pause";
+    } else { // pause music
+        music.pause();
+        // remove pause, add play
+        pButton.className = "";
+        pButton.className = "fas fa-play";
+    }
+}
+
+// Gets audio file duration
+music.addEventListener("canplaythrough", function () {
+    duration = music.duration;
+}, false);
+
+// getPosition
+// Returns elements left position relative to top-left of viewport
+function getPosition(el) {
+    return el.getBoundingClientRect().left;
+}
