@@ -18,6 +18,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i" rel="stylesheet">
     <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/audio.css" rel="stylesheet">
     <link href="css/fontawesome-all.css" rel="stylesheet">
     <link href="css/swiper.css" rel="stylesheet">
 	<link href="css/magnific-popup.css" rel="stylesheet">
@@ -120,55 +121,27 @@
             </div> <!-- end of row -->
 
             <div class="row top-div justify-content-center">
-              <div class="col-lg-3 col-md-5 mb-4">
-                <div class="card text-white bg-dark h-60">
-                  <a href="https://docs.google.com/forms/d/e/1FAIpQLScoARlGaFOKGnbS7mfuvZ6TnTcRgodLLIym4SUginzwYBUeXw/viewform?embedded=true"><img class="card-img-top" src="./images/podcast1.png"></a>
-                  <div class="card-body">
-                    <h4 class="card-title">
-                      <a href="https://docs.google.com/forms/d/e/1FAIpQLScoARlGaFOKGnbS7mfuvZ6TnTcRgodLLIym4SUginzwYBUeXw/viewform?embedded=true">Podcast 3</a>
-                    </h4>
-                    <p class="card-text">Test your knowledge of lists in Python with this quiz.</p>
-                  </div>
-                  <div class="card-footer">
-                    <small>&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-lg-1 col-md-1"></div>
-    
-              <div class="col-lg-3 col-md-5 mb-4">
-                <div class="card text-white bg-dark h-60">
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLScoARlGaFOKGnbS7mfuvZ6TnTcRgodLLIym4SUginzwYBUeXw/viewform?embedded=true"><img class="card-img-top" src="./images/podcast2.png"></a>
-                    <div class="card-body">
-                      <h4 class="card-title">
-                        <a href="https://docs.google.com/forms/d/e/1FAIpQLScoARlGaFOKGnbS7mfuvZ6TnTcRgodLLIym4SUginzwYBUeXw/viewform?embedded=true">Podcast 2</a>
-                      </h4>
-                      <p class="card-text">Understand the difference between a While, a for loop and a for each.</p>
+                
+                <div class="container">
+                    <div class="column add-bottom">
+                        <div id="mainwrap">
+                            <div id="nowPlay">
+                                <span id="npAction">Paused...</span><span id="npTitle"></span>
+                            </div>
+                            <div id="audiowrap">
+                                <div id="audio0">
+                                    <audio id="audio1" preload controls>Your browser does not support HTML5 Audio! 😢</audio>
+                                </div>
+                                <div id="tracks">
+                                    <a id="btnPrev">&vltri;</a><a id="btnNext">&vrtri;</a>
+                                </div>
+                            </div>
+                            <div id="plwrap">
+                                <ul id="plList"></ul>
+                            </div>
+                        </div>
                     </div>
-                    <div class="card-footer">
-                      <small>&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-                    </div>
-                  </div>
-              </div>
-
-              <div class="col-lg-1 col-md-1"></div>
-    
-              <div class="col-lg-3 col-md-5 mb-4">
-                <div class="card text-white bg-dark h-60">
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLScoARlGaFOKGnbS7mfuvZ6TnTcRgodLLIym4SUginzwYBUeXw/viewform?embedded=true"><img class="card-img-top" src="./images/podcast3.png"></a>
-                    <div class="card-body">
-                      <h4 class="card-title">
-                        <a href="https://docs.google.com/forms/d/e/1FAIpQLScoARlGaFOKGnbS7mfuvZ6TnTcRgodLLIym4SUginzwYBUeXw/viewform?embedded=true">Podcast 3</a>
-                      </h4>
-                    </div>
-                    <div class="card-footer">
-                      <small>&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-                    </div>
-                  </div>
-              </div>
-    
-              
+                </div>                
     
             </div>
             <!-- /.row -->
